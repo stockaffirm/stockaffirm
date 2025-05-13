@@ -10,13 +10,13 @@ async function fetchGlobalQuote(symbol: string) {
   return json["Global Quote"];
 }
 
-type RouteParams = {
-  params: {
-    symbol: string;
-  };
-};
+export default async function StockPage({
+  params,
+}: {
+  params: { symbol: string };
+}) {
 
-export default async function StockPage({ params }: RouteParams) {
+
   const symbol = params.symbol.toUpperCase();
 
   const quote = await fetchGlobalQuote(symbol);
