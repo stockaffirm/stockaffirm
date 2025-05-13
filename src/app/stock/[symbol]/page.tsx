@@ -15,8 +15,6 @@ export default async function StockPage({
 }: {
   params: { symbol: string };
 }) {
-
-
   const symbol = params.symbol.toUpperCase();
 
   const quote = await fetchGlobalQuote(symbol);
@@ -58,7 +56,6 @@ export default async function StockPage({
         </span>
       </div>
 
-      {/* Optional: Add any metrics block here later */}
       <div className="mt-16 text-lg text-gray-700 space-y-2 pl-2"></div>
 
       <AnalystSentiment
