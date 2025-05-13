@@ -10,7 +10,9 @@ async function fetchGlobalQuote(symbol: string) {
   const json = await res.json();
   return json["Global Quote"];
 }
-export default async function StockPage({
+type RouteParams = { params: { symbol: string } };
+
+export default async function StockPage({ params }: RouteParams) {
   params,
 }: {
   params: { symbol: string };
