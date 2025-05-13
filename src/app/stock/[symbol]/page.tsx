@@ -10,10 +10,11 @@ async function fetchGlobalQuote(symbol: string) {
   const json = await res.json();
   return json["Global Quote"];
 }
-
-import type { PageProps } from "next";
-
-export default async function StockPage({ params }: PageProps<{ symbol: string }>) {
+export default async function StockPage({
+  params,
+}: {
+  params: { symbol: string };
+}) {
 
 
   const symbol = params.symbol.toUpperCase();
