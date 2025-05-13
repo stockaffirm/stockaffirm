@@ -1,11 +1,10 @@
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 "use client";
 
 
 import { Chart, ArcElement, Tooltip, Legend } from "chart.js";
 Chart.register(ArcElement, Tooltip, Legend);
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export default function AnalystSentiment({
   data,
   currentPrice,
@@ -13,6 +12,8 @@ export default function AnalystSentiment({
   data: any;
   currentPrice: number;
 }) {
+/* eslint-enable @typescript-eslint/no-explicit-any */
+
 
   const targetPrice = parseFloat(data.analysttargetprice);
   const upside = targetPrice && currentPrice ? (((targetPrice - currentPrice) / currentPrice) * 100).toFixed(2) : null;
