@@ -11,9 +11,9 @@ async function fetchGlobalQuote(symbol: string) {
 }
 
 export default async function StockPage({
-  params,
+  params
 }: {
-  params: { symbol: string };
+  params: Promise<{ symbol: string }>
 }) {
   const symbol = params.symbol.toUpperCase();
 
