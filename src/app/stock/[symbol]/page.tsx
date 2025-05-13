@@ -11,11 +11,14 @@ async function fetchGlobalQuote(symbol: string) {
   return json["Global Quote"];
 }
 
-type Props = {
-  params: { symbol: string };
-};
+import { type Metadata } from "next";
 
-export default async function StockPage({ params }: Props) {
+export default async function StockPage({
+  params,
+}: {
+  params: { symbol: string };
+}) {
+
   const symbol = params.symbol.toUpperCase();
 
   const quote = await fetchGlobalQuote(symbol);
