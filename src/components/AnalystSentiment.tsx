@@ -5,7 +5,15 @@
 import { Chart, ArcElement, Tooltip, Legend } from "chart.js";
 Chart.register(ArcElement, Tooltip, Legend);
 
-export default function AnalystSentiment({ data, currentPrice }: { data: any; currentPrice: number }) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default function AnalystSentiment({
+  data,
+  currentPrice,
+}: {
+  data: any;
+  currentPrice: number;
+}) {
+
   const targetPrice = parseFloat(data.analysttargetprice);
   const upside = targetPrice && currentPrice ? (((targetPrice - currentPrice) / currentPrice) * 100).toFixed(2) : null;
 
