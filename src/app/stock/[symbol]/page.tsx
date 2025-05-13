@@ -11,7 +11,6 @@ async function fetchGlobalQuote(symbol: string) {
   return json["Global Quote"];
 }
 
-
 export default async function StockPage({
   params,
 }: {
