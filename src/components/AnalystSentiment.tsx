@@ -1,4 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 "use client";
+
 
 import { Chart, ArcElement, Tooltip, Legend } from "chart.js";
 Chart.register(ArcElement, Tooltip, Legend);
